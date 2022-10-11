@@ -1,0 +1,39 @@
+.buttonMenu {
+
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+}
+
+.basket{
+    position: absolute;
+    width: 1140px;
+    height: 1078px;
+    left: 6px;
+    top: 0px;
+
+    background: #C4C4C4;
+    opacity: 0.2;
+}
+.textBasket{
+    position: absolute;
+    width: 327px;
+    height: 56px;
+    left: 490px;
+    top: 347px;
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 56px;
+
+    color: #000000;
+}
+
+.brandBar{
+    display: flex;
+}
+.all{
+    background-color: aqua;
+}
