@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/MySocialPage/static/css/main.7e1036ee.css",
+    "main.js": "/MySocialPage/static/js/main.f065417e.js",
+    "index.html": "/MySocialPage/index.html",
+    "main.7e1036ee.css.map": "/MySocialPage/static/css/main.7e1036ee.css.map",
+    "main.f065417e.js.map": "/MySocialPage/static/js/main.f065417e.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7e1036ee.css",
+    "static/js/main.f065417e.js"
+  ]
+}
