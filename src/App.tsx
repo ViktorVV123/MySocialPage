@@ -10,6 +10,9 @@ import News from "./Components/News/News";
 import Sittings from "./Components/Sittings/Sittings";
 import {Footer} from "./Components/Footer/Footer";
 import {v1} from "uuid";
+import {useAppSelector} from "./hook/PostsTypeSelector";
+import {useDispatch} from "react-redux";
+import {AddPostAC, CounterLikeAC, DeletePostAC} from "./store/Reducer/postReducer";
 
 type store = {
     dialog: Array<DialogType>
@@ -30,6 +33,9 @@ type PostType = {
 
 
 function App() {
+    const {posts} = useAppSelector(state => state.post);
+    const dispatch = useDispatch();
+
 
     let [name, setName] = useState([
 
@@ -48,23 +54,20 @@ function App() {
         {id:v1(), message:'Nice to meet you my dear friends'},
     ]);
 
-    let [post, setPost] = useState(
-        [
-        {id: v1(), text: 'hello people', like: 23},
-            {id: v1(), text: 'hello a go walking', like: 2},
-            {id: v1(), text: 'what happen', like: 5},
-            {id: v1(), text: 'my new page, i want my block and send picture in my live', like: 0}
-        ])
 
     const deletePost = (id:string) => {
-        setPost(post.filter(e=>e.id !== id))
+        dispatch(DeletePostAC(id))
+
     }
+
+
     const addNewPost = (text:string) => {
-        let newPost={id:v1(),text:text,like:0}
-        setPost([newPost,...post])
+        dispatch(AddPostAC(text,0));
+
     }
 const Counter = (id :string, like:number)=>{
-    setPost(post.map(e => e.id === id ? { ...e, like:like + 1}:e))
+        dispatch(CounterLikeAC(id,like))
+/*    setPost(post.map(e => e.id === id ? { ...e, like:like + 1}:e))*/
 
 }
 return (
@@ -73,7 +76,7 @@ return (
         <Header/>
 
         <Routes>
-            <Route path={'/MySocialPage'} element={<Main post={post} deletePost={deletePost} addNewPost={addNewPost} Counter={Counter} />}/>
+            <Route path={'/'} element={<Main post={posts} deletePost={deletePost} addNewPost={addNewPost} Counter={Counter} />}/>
             <Route path={'/dialogs'} element={<Dialogs dialog={dialog} name={name}/>}/>
             <Route path={'/news'} element={<News/>}/>
             <Route path={'/music'} element={<Music/>}/>

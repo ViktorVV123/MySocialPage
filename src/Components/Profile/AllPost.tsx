@@ -1,6 +1,10 @@
-import React, {ChangeEvent,KeyboardEvent, useState} from 'react';
+import React, {ChangeEvent, KeyboardEvent, useState} from 'react';
 import style from "./Main.module.css";
+import {useAppSelector} from "../../hook/PostsTypeSelector";
 import Post from "./Post";
+import {useDispatch} from "react-redux";
+import {AddPostAC} from "../../store/Reducer/postReducer";
+
 
 
 type AllPostType = {
@@ -16,22 +20,27 @@ type PostType = {
     like: number
 }
 
-const AllPost = (props: AllPostType) => {
+export const AllPost= (props: AllPostType) => {
 
+    const {posts} = useAppSelector(state => state.post);
+    const dispatch = useDispatch();
+
+  /*  const state = useSelector<AppRootStateType, TasksStateType>(state => state.tasks)*/
     let [addPost, setAddPost] = useState('')
     const addPostHandler = (event: ChangeEvent<HTMLTextAreaElement>) => {
         setAddPost(event.currentTarget.value)
     }
 
     const addNewPostHandler = () => {
+     /*   dispatch(AddPostAC(addPost,10));*/
         if (addPost.trim()!==''){
         props.addNewPost(addPost)}
         setAddPost('')
     }
     const onKeyDownHandler = (event:KeyboardEvent<HTMLTextAreaElement>) => {
-if (event.key==='Enter'){
-    addNewPostHandler()
-}
+        if (event.key==='Enter'){
+            addNewPostHandler()
+        }
     }
     return (
         <div>
@@ -44,7 +53,7 @@ if (event.key==='Enter'){
                     <button onClick={addNewPostHandler}>add post</button>
 
                     </div>
-                <Post post={props.post} deletePost={props.deletePost} Counter={props.Counter} />
+                <Post post={posts} deletePost={props.deletePost} Counter={props.Counter} />
                 </div>
 
 

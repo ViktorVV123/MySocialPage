@@ -1,6 +1,6 @@
 import {v1} from "uuid";
 
-export let state= {
+
 
     /*/!**!/
 
@@ -22,4 +22,19 @@ export let state= {
             {id:v1(),text:'what happen',like:'5'},
             {id:v1(),text:'my new page, i want my block and send picture in my live',like:'0'}]
     }*/
-}
+
+
+import {applyMiddleware, combineReducers, legacy_createStore} from "redux";
+import {postReducer} from "./postReducer";
+import thunk from "redux-thunk";
+
+
+export const rootReducer = combineReducers({
+post: postReducer,
+
+    //write reducer here
+})
+
+export type RootState = ReturnType<typeof rootReducer>
+
+export const store =legacy_createStore (rootReducer, applyMiddleware(thunk))
