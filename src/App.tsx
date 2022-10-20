@@ -76,7 +76,7 @@ return (
         <Header/>
 
         <Routes>
-            <Route path={'/MySocialPage'} element={<Main post={posts} deletePost={deletePost} addNewPost={addNewPost} Counter={Counter} />}/>
+            <Route path={'/MySocialPage/'} element={<Main post={posts} deletePost={deletePost} addNewPost={addNewPost} Counter={Counter} />}/>
             <Route path={'/dialogs'} element={<Dialogs dialog={dialog} name={name}/>}/>
             <Route path={'/news'} element={<News/>}/>
             <Route path={'/music'} element={<Music/>}/>
