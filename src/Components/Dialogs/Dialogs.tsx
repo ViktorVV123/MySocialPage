@@ -1,30 +1,18 @@
 import React from 'react';
 import style from './Dialog.module.css'
+import {useAppSelector} from "../../hook/PostsTypeSelector";
+import {useDispatch} from "react-redux";
 
-type DialogType={
-    dialog:Array<Mtype>
-    name:Array<NameType>
-}
 
-type Mtype={
 
-    message:string
-    id:string
-
-}
-type NameType={
-    name:string
-    id:string
-
-}
-
-const Dialogs = (props:DialogType) => {
-
+const Dialogs = () => {
+    const {dialog,name} = useAppSelector(state => state.dialog);
+    const dispatch = useDispatch();
 
     return (
         <div className={style.container} >
 <div className={style.name}>
-            {props.name.map((e)=>{
+            {name.map((e)=>{
                 return (
                     <div >
                         {e.name}
@@ -34,7 +22,7 @@ const Dialogs = (props:DialogType) => {
             })}
 </div>
             <div className={style.message}>
-               {props.dialog.map((e)=>{
+               {dialog.map((e)=>{
                    return(
                        <div key={e.id} >
 

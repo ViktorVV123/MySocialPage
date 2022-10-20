@@ -14,22 +14,7 @@ import {useAppSelector} from "./hook/PostsTypeSelector";
 import {useDispatch} from "react-redux";
 import {AddPostAC, CounterLikeAC, DeletePostAC} from "./store/Reducer/postReducer";
 
-type store = {
-    dialog: Array<DialogType>
-    post: Array<PostType>
-}
 
-type DialogType = {
-    id: string
-    message: string
-    name: string
-}
-
-type PostType = {
-    id: string
-    text: string
-    like: string
-}
 
 
 function App() {
@@ -37,22 +22,7 @@ function App() {
     const dispatch = useDispatch();
 
 
-    let [name, setName] = useState([
 
-        {id:v1(),name:'Dima'},
-        {id:v1(),name:'Andrey'},
-        {id:v1(),name:'Nikita'},
-        {id:v1(),name:'Igor'},
-    ]);
-
-
-    let [dialog, setDialogs] = useState([
-
-        {id:v1(), message:'Hello Viktor'},
-        {id:v1(), message:'How are you bro'},
-        {id:v1(), message:'Are you go to walking?'},
-        {id:v1(), message:'Nice to meet you my dear friends'},
-    ]);
 
 
     const deletePost = (id:string) => {
@@ -67,7 +37,7 @@ function App() {
     }
 const Counter = (id :string, like:number)=>{
         dispatch(CounterLikeAC(id,like))
-/*    setPost(post.map(e => e.id === id ? { ...e, like:like + 1}:e))*/
+
 
 }
 return (
@@ -76,8 +46,8 @@ return (
         <Header/>
 
         <Routes>
-            <Route path={'/MySocialPage/'} element={<Main post={posts} deletePost={deletePost} addNewPost={addNewPost} Counter={Counter} />}/>
-            <Route path={'/dialogs'} element={<Dialogs dialog={dialog} name={name}/>}/>
+            <Route path={'/'} element={<Main post={posts} deletePost={deletePost} addNewPost={addNewPost} Counter={Counter} />}/>
+            <Route path={'/dialogs'} element={<Dialogs/>}/>
             <Route path={'/news'} element={<News/>}/>
             <Route path={'/music'} element={<Music/>}/>
             <Route path={'/sittings'} element={<Sittings/>}/>

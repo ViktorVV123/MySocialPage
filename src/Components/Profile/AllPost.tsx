@@ -4,6 +4,7 @@ import {useAppSelector} from "../../hook/PostsTypeSelector";
 import Post from "./Post";
 import {useDispatch} from "react-redux";
 import {AddPostAC} from "../../store/Reducer/postReducer";
+import {Button} from "@mui/material";
 
 
 
@@ -43,16 +44,19 @@ export const AllPost= (props: AllPostType) => {
         }
     }
     return (
-        <div>
+        <div >
             <div className={style.post}>
-                <div>
-                    <textarea
+                <div className={style.textariaButton} >
+
+                   <div><textarea  className={style.textaria}
                         onKeyDown={onKeyDownHandler}
                         value={addPost}
                         onChange={addPostHandler}/>
-                    <button onClick={addNewPostHandler}>add post</button>
-
-                    </div>
+                   </div>
+                    <button className={style.button} onClick={addNewPostHandler} >
+                        send
+                    </button>
+                </div>
                 <Post post={posts} deletePost={props.deletePost} Counter={props.Counter} />
                 </div>
 
