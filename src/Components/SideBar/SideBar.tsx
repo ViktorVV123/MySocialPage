@@ -6,34 +6,17 @@ import {Button, Offcanvas} from "react-bootstrap";
 
 export const SideBar = () => {
 
-    const [show, setShow] = useState(false);
 
-    const handleClose = () => setShow(false);
-    const handleShow = () => setShow(true);
 
     return (
-        <>
-            <Button variant="outline-secondary" style={{color: 'white'}}
-                    className='m-1' onClick={handleShow}>
-                Menu
-            </Button>
+        <div>
+            <div><NavLink className={style.boton1} to={'/'}>Profile</NavLink></div>
+            <div><NavLink className={style.boton1} to={'/dialogs'}>Message</NavLink></div>
+            <div><NavLink className={style.boton1} to={'/news'}>News</NavLink></div>
+            <div><NavLink className={style.boton1} to={'/music'}>Music</NavLink></div>
+            <div><NavLink className={style.boton1} to={'/sittings'}>Sittings</NavLink></div>
 
-            <Offcanvas show={show} onHide={handleClose} className={style.all}>
-                <Offcanvas.Header className={style.buttonMenu} closeButton>
-
-                    <Offcanvas.Title   >Menu</Offcanvas.Title>
-
-                </Offcanvas.Header>
-                <Offcanvas.Body className={style.all}>
-
-                    <div className={style.buttonMenu} ><NavLink to={'/'}>Profile</NavLink></div>
-                    <div className={style.buttonMenu} ><NavLink to={'/dialogs'}>Message</NavLink></div>
-                    <div className={style.buttonMenu} ><NavLink to={'/news'}>News</NavLink></div>
-                    <div className={style.buttonMenu} ><NavLink to={'/music'}>Music</NavLink></div>
-                    <div className={style.buttonMenu} ><NavLink to={'/sittings'}>Sittings</NavLink></div>
-                </Offcanvas.Body>
-            </Offcanvas>
-        </>
+        </div>
     );
 
 
