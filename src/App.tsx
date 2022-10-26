@@ -43,7 +43,7 @@ const Counter = (id :string, like:number)=>{
 }
 return (
 
-    <BrowserRouter>
+
         <div className="row">
             <Header/>
 
@@ -55,6 +55,7 @@ return (
                 <Routes>
                     <Route path={'/'} element={<Main post={posts} deletePost={deletePost} addNewPost={addNewPost}
                                                      Counter={Counter}/>}/>
+                    {/*MySocialPage/*/}
                     <Route path={'/dialogs'} element={<Dialogs/>}/>
                     <Route path={'/news'} element={<News/>}/>
                     <Route path={'/music'} element={<Music/>}/>
@@ -63,7 +64,7 @@ return (
             </div>
             <Footer/>
         </div>
-    </BrowserRouter>
+
 
 );
 }

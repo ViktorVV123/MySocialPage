@@ -1,10 +1,11 @@
 import React, {ChangeEvent, KeyboardEvent, useState} from 'react';
-import style from "./Main.module.css";
+
 import {useAppSelector} from "../../hook/PostsTypeSelector";
 import Post from "./Post";
 import {useDispatch} from "react-redux";
 import {AddPostAC} from "../../store/Reducer/postReducer";
 import {Button} from "@mui/material";
+import style from './Textaria.module.css'
 
 
 
@@ -13,14 +14,12 @@ type AllPostType = {
     deletePost: (id: string) => void
     addNewPost:(text:string)=>void
     Counter:(id :string, like:number)=>void
-
 }
 type PostType = {
     id: string
     text: string
     like: number
 }
-
 export const AllPost= (props: AllPostType) => {
 
     const {posts} = useAppSelector(state => state.post);
@@ -43,24 +42,25 @@ export const AllPost= (props: AllPostType) => {
             addNewPostHandler()
         }
     }
+
     return (
         <div >
             <div className={style.post}>
                 <div className={style.textariaButton} >
 
-                   <div><textarea  className={style.textaria}
+                   <div><textarea  placeholder='Add your new post' required className={style.textaria}
                         onKeyDown={onKeyDownHandler}
                         value={addPost}
                         onChange={addPostHandler}/>
                    </div>
-                    <button className={style.button} onClick={addNewPostHandler} >
+                    <button className={style.green} onClick={addNewPostHandler} >
                         send
                     </button>
                 </div>
-                <Post post={posts} deletePost={props.deletePost} Counter={props.Counter} />
+
                 </div>
 
-
+            <Post post={posts} deletePost={props.deletePost} Counter={props.Counter} />
             </div>
 
     );

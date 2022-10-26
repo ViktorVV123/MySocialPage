@@ -26,7 +26,7 @@ const Post = (props: PostType) => {
         <div className={style.post}>
 
 
-            <div >
+            <div>
                 {props.post.map((e) => {
 
 
@@ -39,17 +39,17 @@ const Post = (props: PostType) => {
 
                     return (
                         <div key={e.id}>
-                            <div >
+                            <div className={style.allPostColor}>
                                 <div >
-                                    <div> <img className={style.avatar}  src={ava} alt='avatar'/>
-                                        <div style={{fontSize: '1rem',margin:5}}>Виктор Власюк</div>
+                                    <div><img className={style.avatar} src={ava} alt='avatar'/>
+                                        <div style={{fontSize: '1rem', margin: 5}}>Виктор Власюк</div>
 
                                     </div>
 
-                                       <div className={style.textPost}>  {e.text}</div>
+                                    <div className={style.textPost}>  {e.text}</div>
 
                                 </div>
-                                <IconButton style={{margin:5}} onClick={deletePostHandler}>
+                                <IconButton style={{margin: 5}} onClick={deletePostHandler}>
                                     <Delete/>
                                 </IconButton>
                                 <button onClick={CounterHandler}>{e.like}</button>

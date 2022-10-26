@@ -2,30 +2,3 @@
     background-color: #176060;
 
 }
-
-/*width: 1200px;
-margin: 0 auto;*/
-  /*
-  display: grid;
-  grid-template-areas:
-    "header header "
-    "nav content "
-    "footer footer";
-  */
-/*  grid-template-rows: 60px 1fr;
-  grid-template-columns: 2fr 10fr;*/
-/*  grid-template-columns: 15rem 1fr;
-  grid-template-rows: 4rem 1fr 3rem;*/
-
-/*
-
-.app-wrapper-content {
-  grid-area: content;
-  background-color: burlywood;
-}
-
-.app-wrapper-content img {
-  width: 1000px;
-  height: 900px;
-}
-*/

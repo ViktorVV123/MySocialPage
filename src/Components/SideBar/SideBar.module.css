@@ -1,4 +1,12 @@
+
+.paddingBar{
+    padding: 10px;
+
+}
+
+
 .boton1 {
+
     background-color: #176060;;
     text-decoration: none;
     display: block;

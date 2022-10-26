@@ -1,20 +1,18 @@
 .footer {
 
-
     display: flex;
     justify-content: center;
-    position: relative;
     background: #2d2d2d;
 }
 
 
 
 .footerContainer {
-    width: 30%;
+
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 40px 0 20px;
+
 }
 
 .socialBlock{
@@ -25,44 +23,13 @@
     padding: 5px;
 
 }
-
-.socialIcon {
-    width: 60px;
-    height: 60px;
-    border: 2px solid #4a4a4a;
-
-}
-
-
 .title{
-    margin-top: 1px;
+
     color: #9b9595;
 }
-
-
 .copyRight {
-    margin-top: 5px;
-    font-size: 16px;
-    opacity: 0.6;
+
+
     color: white;
 }
 
-.socialIcon img:first-child {
-    width: 50%;
-}
-
-.socialIcon:hover {
-
-}
-
-.socialIcon a {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.socialIcon img {
-    width: 40%;
-}

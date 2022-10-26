@@ -1,3 +1,17 @@
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+    border: 1px solid #f1f5f8;
+    -webkit-text-fill-color: #f9fbf9;
+    -webkit-box-shadow: #1f1f20;
+    transition: background-color 5000s ease-in-out 0s;
+}
 
 
 
@@ -5,12 +19,13 @@
 
 .mainContainer {
 
-    border: #1a1616 2px solid;
     display: flex;
     width: 100%;
     min-height: 100%;
     justify-content: space-evenly;
     background-color: #176060;
+    padding: 2rem;
+
 
     /*  display: flex;
       flex-flow: column wrap;
@@ -18,75 +33,51 @@
       background-color: #176060;*/
 
 }
+.allPostColor{
 
-
-.post {
-
-
-
-    border: #1a1616 2px solid;
-    margin: 15px;
-    align-items: flex-end;
-
-
-
+    border-radius: 10px;
+    background-color: #176767;
+    margin-bottom: 20px;
 }
+
 .photo {
-    margin: 15px;
-    border: #1a1616 2px solid;
-    height: 200px;
-    width: 200px;
-    background-color: indianred;
+margin: 15px;
+border: #1a1616 2px solid;
+height: 200px;
+width: 200px;
+background-color: indianred;
 }
 
 .profileInfo {
-    margin: 15px;
-    background-color: #C4C4C4;
-    border: #1a1616 2px solid;
+margin: 10px;
+background-color: #C4C4C4;
+border: #1a1616 2px solid;
 
 }
 
 
 .textPost {
-    text-align: right;
-    border: #1a1616 2px solid;
-    border-radius: 10px;
-    width: 600px;
-    height: 50px;
+
+text-align: right;
+border: #1a1616 2px solid;
+border-radius: 10px;
+width: 600px;
+height: 50px;
 
 }
-
 .avatar {
 
-    border-radius: 10px;
-    width: 50px;
-    height: 50px;
+border-radius: 10px;
+width: 50px;
+height: 50px;
 
 }
-
-.textaria {
-
-    width: 350px;
-    height: 70px;
+.textInfo{
+font-family: 'Fira Sans', sans-serif;
 }
 
-.textariaButton {
-    border: #1a1616 2px solid;
 
 
-}
-
-.button {
-    border-radius: 10px;
-
-    margin-left: 10px;
-}
-
-.postPlusInput {
-    display: flex;
-
-    justify-content: space-around;
-}
 
 
 
