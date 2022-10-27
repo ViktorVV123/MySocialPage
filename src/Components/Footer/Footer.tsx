@@ -1,7 +1,6 @@
 import React from 'react';
 import style from './Footer.module.css'
-import vkIcon from '../../image/vk3.jpg'
-import telegramIcon from '../../image/tt.png'
+
 
 
 

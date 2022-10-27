@@ -2,6 +2,7 @@ import React from 'react';
 import style from './Dialog.module.css'
 import {useAppSelector} from "../../hook/PostsTypeSelector";
 import {useDispatch} from "react-redux";
+import {SideBar} from "../SideBar/SideBar";
 
 
 
@@ -10,7 +11,8 @@ const Dialogs = () => {
     const dispatch = useDispatch();
 
     return (
-        <div className={style.container} >
+        <div className={'container'} >
+            <SideBar/>
 <div className={style.name}>
             {name.map((e)=>{
                 return (

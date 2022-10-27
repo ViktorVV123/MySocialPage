@@ -1,0 +1,91 @@
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+    border: 1px solid #1d1d1e;
+    -webkit-text-fill-color: #191a19;
+    -webkit-box-shadow: #1f1f20;
+    transition: background-color 5000s ease-in-out 0s;
+    color: black;
+}
+
+
+
+
+
+.posts{
+    flex-wrap: wrap;
+}
+.textariaButton{
+    padding: 10px;
+    background-color: #b4d6ec;
+    box-shadow: 10px 5px 5px #252525;
+    border-radius: 10px;
+}
+
+.textaria {
+
+    min-width: 200px;
+    height: 70px;
+    border-radius: 10px;
+    font-size: 17px;
+    padding:5px;
+    color: black;
+    margin-bottom: 5px;
+    border: #1a1616 2px solid;
+    flex-wrap: wrap;
+
+}
+.post{
+   display: flex;
+    justify-content: center;
+    padding: 20px;
+    margin: 10px;
+    flex-wrap: wrap;
+
+}
+.mapPost{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+   flex-wrap: wrap;
+
+    margin: 10px;
+
+}
+.all{
+
+    background-color: #b4d6ec;
+    box-shadow: 10px 5px 5px #252525;
+    padding: 10px;
+    border-radius: 20px;
+
+}
+
+
+.avatar {
+
+    border-radius: 10px;
+    width: 50px;
+    height: 50px;
+
+}
+
+.textPost {
+padding: 10px;
+    margin: 5px;
+    text-align: center;
+    min-width: 300px;
+    height: 50px;
+    flex-wrap: wrap;
+
+}
+::placeholder {
+    color: #1a1a1c;
+    font-size: 1em;
+}

@@ -70,11 +70,11 @@ import {allFETCH, initialStateType, PostActionType} from "../../allTypeHere/dial
 
 const initialState: initialStateType = {
     posts: [
-        {id: v1(), text: 'Hello Roma', like: 100},
-        {id: v1(), text: 'hello people', like: 23},
-        {id: v1(), text: 'hello a go walking', like: 2},
-        {id: v1(), text: 'what happen', like: 5},
-        {id: v1(), text: 'my new page, i want my block and send picture in my live', like: 0}]
+        {id: v1(), text: 'Lorem ipsum et sed rutrum congue quisque auctor: adipiscing eu fusce ultricies auctor at sed at commodo massa amet eros, curabitur, duis. Urna et justo odio ultricies, donec,', like: 100},
+        {id: v1(), text: 'Malesuada lectus quisque malesuada diam: metus sodales: eget mattis ipsum. Quam curabitur at gravida orci fusce in a non magna nulla', like: 23},
+        {id: v1(), text: 'Nec nulla donec ornare ut diam urna at pharetra pellentesque fusce: urna pellentesque sagittis ipsum', like: 2},
+        {id: v1(), text: 'Sit sapien gravida molestie diam nec risus gravida in mattis fusce et adipiscing pharetra diam vivamus sem eget.', like: 5},
+        {id: v1(), text: 'Metus quisque magna leo: amet duis risus: donec quisque gravida: lectus — nulla risus ipsum risus. In metus ', like: 0}]
 
 }
 

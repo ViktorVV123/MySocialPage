@@ -1,0 +1,52 @@
+.container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.containerInf {
+    display: flex;
+    background-color: #b4d6ec;
+    box-shadow: 10px 5px 5px #252525;
+    margin: 20px;
+    border-radius: 10px;
+    flex-wrap: wrap;
+    padding: 20px;
+
+
+
+
+}
+
+
+.profileInfo {
+    margin: 10px;
+    background-color: #C4C4C4;
+    border: #1a1616 2px solid;
+    padding: 20px;
+    flex-wrap: wrap;
+
+}
+
+.textInfo {
+    font-family: 'Fira Sans', sans-serif;
+    padding: 20px;
+    text-align: left;
+    flex-wrap: wrap;
+
+
+}
+
+
+.warning {
+    background-color: indianred;
+    flex-wrap: wrap;
+}
+
+ul {
+    margin: 10px;
+    font-weight: bold;
+    text-align: center;
+    flex-wrap: wrap;
+}

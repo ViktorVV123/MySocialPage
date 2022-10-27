@@ -1,8 +1,7 @@
 .footer {
 
-    display: flex;
-    justify-content: center;
-    background: #2d2d2d;
+ background-color: black;
+    width: 100%;
 }
 
 
@@ -15,14 +14,7 @@
 
 }
 
-.socialBlock{
-    display: flex;
-    justify-content: space-between;
-    width: 200px;
-    margin-top: -5px;
-    padding: 5px;
 
-}
 .title{
 
     color: #9b9595;

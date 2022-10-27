@@ -1,11 +1,8 @@
 import React, {ChangeEvent, KeyboardEvent, useState} from 'react';
-
-import {useAppSelector} from "../../hook/PostsTypeSelector";
-import Post from "./Post";
+import {useAppSelector} from "../../../hook/PostsTypeSelector";
 import {useDispatch} from "react-redux";
-import {AddPostAC} from "../../store/Reducer/postReducer";
-import {Button} from "@mui/material";
-import style from './Textaria.module.css'
+import Post from "./Post";
+import style from './Post.module.css'
 
 
 
@@ -41,10 +38,10 @@ export const AllPost= (props: AllPostType) => {
 
     return (
         <div >
-            <div className={style.post}>
+            <div className={style.posts}>
                 <div className={style.textariaButton} >
 
-                   <div><textarea  placeholder='Add your new post' required className={style.textaria}
+                   <div><textarea placeholder='Add your new post' required className={style.textaria}
                         onKeyDown={onKeyDownHandler}
                         value={addPost}
                         onChange={addPostHandler}/>
