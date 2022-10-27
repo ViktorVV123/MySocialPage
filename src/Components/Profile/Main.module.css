@@ -116,3 +116,7 @@ font-family: 'Fira Sans', sans-serif;
     display: flex;
     justify-content:left;
 }
+
+.warning{
+    background-color: indianred;
+}

@@ -9,13 +9,14 @@ import Music from "./Components/Music/Music";
 import News from "./Components/News/News";
 import Sittings from "./Components/Sittings/Sittings";
 import {Footer} from "./Components/Footer/Footer";
-import {v1} from "uuid";
+
 import {useAppSelector} from "./hook/PostsTypeSelector";
 import {useDispatch} from "react-redux";
 import {AddPostAC, CounterLikeAC, DeletePostAC} from "./store/Reducer/postReducer";
 import {SideBar} from "./Components/SideBar/SideBar";
 import {CreateProfile} from "./Components/CreateProfile/CreateProfile";
 import {createtitleReducerAC} from "./store/Reducer/CreateTitleReducer";
+import {v1} from "uuid";
 
 
 /*const {title2,title1,title4,title5,title3} = useAppSelector(state => state.create);
@@ -23,11 +24,11 @@ const dispatch = useDispatch();*/
 
 
 function App() {
-    const dispatch = useDispatch();
+   /* const {title1,title2,title3,title4,title5} = useAppSelector(state => state.create);
 
+    const dispatch = useDispatch();*/
 
-
-
+    const dispatch = useDispatch()
 
 
 
@@ -48,9 +49,10 @@ const Counter = (id :string, like:number)=>{
 
 
 }
-    const crateTitle = (title:string,id:string) => {
+/*    const crateTitle = (title:string,id:string) => {
         dispatch(createtitleReducerAC(title,id))
-    }
+    }*/
+
 return (
 
 
@@ -70,7 +72,7 @@ return (
                     <Route path={'/news'} element={<News/>}/>
                     <Route path={'/music'} element={<Music/>}/>
                     <Route path={'/sittings'} element={<Sittings/>}/>
-                    <Route path={'/CreateProfile'} element={<CreateProfile />}/>
+                    <Route path={'/CreateProfile'} element={<CreateProfile/> }/>
                 </Routes>
             </div>
             <Footer/>

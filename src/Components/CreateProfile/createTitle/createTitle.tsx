@@ -12,6 +12,8 @@ type CreateTitlePropsType={
 
 export const CreateTitle =(props: CreateTitlePropsType) =>{
 
+
+
     let [editMode, setEditMode] = useState(false);
     let [title, setTitle] = useState(props.value);
 
