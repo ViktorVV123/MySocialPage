@@ -14,13 +14,20 @@ import {useAppSelector} from "./hook/PostsTypeSelector";
 import {useDispatch} from "react-redux";
 import {AddPostAC, CounterLikeAC, DeletePostAC} from "./store/Reducer/postReducer";
 import {SideBar} from "./Components/SideBar/SideBar";
+import {CreateProfile} from "./Components/CreateProfile/CreateProfile";
+import {createtitleReducerAC} from "./store/Reducer/CreateTitleReducer";
 
 
+/*const {title2,title1,title4,title5,title3} = useAppSelector(state => state.create);
+const dispatch = useDispatch();*/
 
 
 function App() {
-    const {posts} = useAppSelector(state => state.post);
     const dispatch = useDispatch();
+
+
+
+
 
 
 
@@ -41,6 +48,9 @@ const Counter = (id :string, like:number)=>{
 
 
 }
+    const crateTitle = (title:string,id:string) => {
+        dispatch(createtitleReducerAC(title,id))
+    }
 return (
 
 
@@ -53,13 +63,14 @@ return (
 
             <div className="col s11">
                 <Routes>
-                    <Route path={'/'} element={<Main post={posts} deletePost={deletePost} addNewPost={addNewPost}
+                    <Route path={'/MySocialPage/'} element={<Main  deletePost={deletePost} addNewPost={addNewPost}
                                                      Counter={Counter}/>}/>
                     {/*MySocialPage/*/}
                     <Route path={'/dialogs'} element={<Dialogs/>}/>
                     <Route path={'/news'} element={<News/>}/>
                     <Route path={'/music'} element={<Music/>}/>
                     <Route path={'/sittings'} element={<Sittings/>}/>
+                    <Route path={'/CreateProfile'} element={<CreateProfile />}/>
                 </Routes>
             </div>
             <Footer/>

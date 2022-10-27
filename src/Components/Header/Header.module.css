@@ -4,3 +4,8 @@
 
 
 }
+.ContainerSideBar{
+    display: flex;
+    justify-content: center;
+
+}

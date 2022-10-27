@@ -1,23 +1,27 @@
 import React from 'react';
 import style from './Main.module.css'
 import AllPost from "./AllPost";
+import {NavLink} from "react-router-dom";
+
 
 type MainType = {
-    post: Array<PostType>
+
     deletePost: (id: string) => void
     addNewPost: (text: string) => void
     Counter: (id: string, like: number) => void
 }
-type PostType = {
-    id: string
-    text: string
-    like: number
-}
+
 const Main = (props: MainType) => {
     return (
         <div>
             <div className={style.mainContainer}>
-                <div className={style.photo}>photo</div>
+                <div className={style.padding}>
+                <div className={style.photo}>photo
+
+                </div>
+
+                    <div><NavLink className={style.green} to={'/CreateProfile/'}>Create Profile</NavLink></div>
+                </div>
                 <div>
                     <div className={style.profileInfo}>
                         <div>
@@ -46,7 +50,7 @@ const Main = (props: MainType) => {
                             </ul>
                         </div>
                     </div>
-                    <AllPost post={props.post} deletePost={props.deletePost} addNewPost={props.addNewPost}
+                    <AllPost deletePost={props.deletePost} addNewPost={props.addNewPost}
                              Counter={props.Counter}/>
                 </div>
             </div>

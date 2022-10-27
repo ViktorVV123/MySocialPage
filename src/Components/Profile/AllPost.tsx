@@ -10,16 +10,12 @@ import style from './Textaria.module.css'
 
 
 type AllPostType = {
-    post: Array<PostType>
+
     deletePost: (id: string) => void
     addNewPost:(text:string)=>void
     Counter:(id :string, like:number)=>void
 }
-type PostType = {
-    id: string
-    text: string
-    like: number
-}
+
 export const AllPost= (props: AllPostType) => {
 
     const {posts} = useAppSelector(state => state.post);

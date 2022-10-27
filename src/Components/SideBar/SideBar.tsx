@@ -10,7 +10,7 @@ export const SideBar = () => {
 
     return (
         <div className={style.paddingBar}>
-            <div><NavLink className={style.boton1} to={'/'}>Profile</NavLink></div>
+            <div><NavLink className={style.boton1} to={'/MySocialPage/'}>Profile</NavLink></div>
             <div><NavLink className={style.boton1} to={'/dialogs'}>Message</NavLink></div>
             <div><NavLink className={style.boton1} to={'/news'}>News</NavLink></div>
             <div><NavLink className={style.boton1} to={'/music'}>Music</NavLink></div>
